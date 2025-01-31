@@ -2,17 +2,12 @@ Domain ArtificialIntelligenceForMedicalImages {
   domainVisionStatement = ""
 
   Subdomain DataPartnership {
-    type = CORE_DOMAIN
+    type = GENERIC_SUBDOMAIN
     domainVisionStatement = ""
   } 
 
-  Subdomain DataAnonimizationAndProcessing {
-    type = CORE_DOMAIN
-    domainVisionStatement = ""
-  }
-
-  Subdomain DataAnalisysAndVisualization {
-    type = SUPPORTING_DOMAIN
+  Subdomain DataProcessing {
+    type = GENERIC_SUBDOMAIN
     domainVisionStatement = ""
   }
 
@@ -22,19 +17,19 @@ Domain ArtificialIntelligenceForMedicalImages {
   }   
 
   Subdomain AIModelDevelopment {
-    type = SUPPORTING_DOMAIN
-    domainVisionStatement = ""
-  }
-
-  Subdomain EscalabilityAndInfrastructure {
-    type = CORE_DOMAIN
+    type = GENERIC_SUBDOMAIN
     domainVisionStatement = ""
   }
 
   Subdomain DataPrivacyAndSecurity {
     type = CORE_DOMAIN
     domainVisionStatement = ""
-  }  
+  }
+
+  Subdomain Sales {
+    type = SUPPORTING_DOMAIN
+    domainVisionStatement = ""
+  }
 }
 
 
@@ -42,7 +37,7 @@ BoundedContext DataIngestionContext implements DataPartnership {
 
 }
 
-BoundedContext DataProcessingContext implements DataPartnership, DataAnonimizationAndProcessing, DataAnalisysAndVisualization {
+BoundedContext DataProcessingContext implements DataPartnership, DataProcessing, DataProcessing {
 
 }
 
@@ -54,7 +49,7 @@ BoundedContext DataSecurityAndPrivacyContext implements DataPrivacyAndSecurity {
 
 }
 
-BoundedContext EscalabilityAndInfrastructureContext implements EscalabilityAndInfrastructure {
+BoundedContext ScalabilityAndInfrastructureContext implements ScalabilityAndInfrastructure {
 
 }
 
@@ -74,7 +69,7 @@ BoundedContext DataIngestionAndCanonizationContext implements APIPlatformDevelop
 
 }
 
-BoundedContext DataAnalisysAndVisualizationContext implements DataAnalisysAndVisualization {
+BoundedContext DataProcessingContext implements DataProcessing {
 
 }
 
@@ -86,12 +81,12 @@ ContextMap PropiedadesDeSaludTech {
 	contains DataProcessingContext
 	contains CustomerFacingContext
   contains DataSecurityAndPrivacyContext
-  contains EscalabilityAndInfrastructureContext
+  contains ScalabilityAndInfrastructureContext
   contains AIModelDevelopmentContext
   contains CustomerAndRelationshipManagementContext
   contains InvestigationAndDevelopmentContext
   contains DataIngestionAndCanonizationContext
-  contains DataAnalisysAndVisualizationContext
+  contains DataProcessingContext
 	
 	/* 
 	 * Tenga en cuenta que dado como el sistema se encuentra se puede asumir un Shared Kernel
