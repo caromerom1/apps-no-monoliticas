@@ -1,0 +1,72 @@
+Domain ArtificialIntelligenceForMedicalImages {
+  domainVisionStatement = ""
+
+  Subdomain DataPartnership {
+    type = GENERIC_SUBDOMAIN
+    domainVisionStatement = "Data integration, Data ingestion, Data Transformation, Data storage"
+  } 
+
+  Subdomain DataProcessing {
+    type = GENERIC_SUBDOMAIN
+    domainVisionStatement = "Data Analysis, Data Processing, Images Anonymization, Images processing, Mapping, Data Validation, Data Verification"
+  }
+
+  Subdomain APIPlatformDevelopment {
+    type = CORE_DOMAIN
+    domainVisionStatement = "Software Engineering, Integration, Technologies, Monitoring, Software Reliability Engineering, Software Quality, Payment Gateway, API, Web Services, Cloud Computing"
+  }   
+
+  Subdomain AIModelDevelopment {
+    type = GENERIC_SUBDOMAIN
+    domainVisionStatement = "Machine learning, Deep learning, Neural Networks, Computer Vision, Image Processing, Image Recognition, Image Classification, Image Segmentation, Image Detection, Image Analysis"
+  }
+
+  Subdomain DataPrivacyAndSecurity {
+    type = CORE_DOMAIN
+    domainVisionStatement = "Data processing, Informatic Security, Data Security, Data Privacy, Data Protection"
+  }
+
+  Subdomain Sales {
+    type = SUPPORTING_DOMAIN
+    domainVisionStatement = "Sales, Customers, Vendors, Partners, Business Development, Marketing, Customer Relationship Management, Customer Service"
+  }
+}
+
+BoundedContext DataIngestionContext implements DataPartnership {}
+BoundedContext DataAnonimizationContext implements DataProcessing {}
+BoundedContext DataCanonizationContext implements DataProcessing {}
+BoundedContext DataSecurityAndPrivacyContext implements DataPrivacyAndSecurity {}
+BoundedContext AIModelDevelopmentContext implements AIModelDevelopment {}
+BoundedContext APIManagementContext implements APIPlatformDevelopment {}
+BoundedContext SalesManagementContext implements Sales {}
+BoundedContext InvestigationAndDevelopmentContext implements AIModelDevelopment {}
+BoundedContext AutomatizationContext implements DataProcessing, AIModelDevelopment {}
+
+ContextMap PropiedadesDeSaludTech {
+  state = TO_BE
+
+  contains DataIngestionContext
+  contains DataAnonimizationContext
+  contains DataCanonizationContext
+  contains DataSecurityAndPrivacyContext
+  contains AIModelDevelopmentContext
+  contains APIManagementContext
+  contains SalesManagementContext
+  contains InvestigationAndDevelopmentContext
+  contains AutomatizationContext
+
+  DataIngestionContext [SK] <-> [SK] DataAnonimizationContext
+  DataIngestionContext [D] <- [U] DataCanonizationContext
+  DataAnonimizationContext [D] <- [U] DataSecurityAndPrivacyContext
+  DataCanonizationContext [D] <- [U] DataSecurityAndPrivacyContext
+  DataCanonizationContext [D] <- [U] AIModelDevelopmentContext
+  AIModelDevelopmentContext [D] <- [U] DataSecurityAndPrivacyContext
+  AIModelDevelopmentContext [D] <- [U] APIManagementContext
+  APIManagementContext [D] <- [U] SalesManagementContext
+  InvestigationAndDevelopmentContext [D] <- [U] AIModelDevelopmentContext
+  InvestigationAndDevelopmentContext [D] <- [U] DataSecurityAndPrivacyContext
+  InvestigationAndDevelopmentContext [D] <- [U] APIManagementContext
+  AutomatizationContext [D] <- [U] AIModelDevelopmentContext
+  AutomatizationContext [D] <- [U] DataAnonimizationContext
+    AutomatizationContext [D] <- [U] DataCanonizationContext
+}

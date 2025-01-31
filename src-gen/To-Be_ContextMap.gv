@@ -1,0 +1,78 @@
+digraph "ContextMapGraph" {
+graph ["imagepath"="/tmp/GraphvizJava"]
+"AIModelDevelopmentContext" ["margin"="0.3","orientation"="342","shape"="egg","fontsize"="16","style"="bold","label"="AIModelDevelopmentContext\n","fontname"="sans-serif"]
+"DataCanonizationContext" ["margin"="0.3","orientation"="1","shape"="egg","fontsize"="16","style"="bold","label"="DataCanonizationContext\n","fontname"="sans-serif"]
+"DataIngestionContext" ["margin"="0.3","orientation"="152","shape"="egg","fontsize"="16","style"="bold","label"="DataIngestionContext\n","fontname"="sans-serif"]
+"DataAnonimizationContext" ["margin"="0.3","orientation"="247","shape"="egg","fontsize"="16","style"="bold","label"="DataAnonimizationContext\n","fontname"="sans-serif"]
+"AutomatizationContext" ["margin"="0.3","orientation"="286","shape"="egg","fontsize"="16","style"="bold","label"="AutomatizationContext\n","fontname"="sans-serif"]
+"InvestigationAndDevelopmentContext" ["margin"="0.3","orientation"="109","shape"="egg","fontsize"="16","style"="bold","label"="InvestigationAndDevelopmentContext\n","fontname"="sans-serif"]
+"APIManagementContext" ["margin"="0.3","orientation"="168","shape"="egg","fontsize"="16","style"="bold","label"="APIManagementContext\n","fontname"="sans-serif"]
+"DataSecurityAndPrivacyContext" ["margin"="0.3","orientation"="345","shape"="egg","fontsize"="16","style"="bold","label"="DataSecurityAndPrivacyContext\n","fontname"="sans-serif"]
+"SalesManagementContext" ["margin"="0.3","orientation"="298","shape"="egg","fontsize"="16","style"="bold","label"="SalesManagementContext\n","fontname"="sans-serif"]
+"AIModelDevelopmentContext" -> "DataCanonizationContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"AIModelDevelopmentContext" -> "AutomatizationContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"AIModelDevelopmentContext" -> "InvestigationAndDevelopmentContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"DataCanonizationContext" -> "DataIngestionContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"DataCanonizationContext" -> "AutomatizationContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"DataIngestionContext" -> "DataAnonimizationContext" ["fontsize"="12","style"="bold","label"="Shared Kernel","dir"="none","fontname"="sans-serif"]
+"DataAnonimizationContext" -> "AutomatizationContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"APIManagementContext" -> "InvestigationAndDevelopmentContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"APIManagementContext" -> "AIModelDevelopmentContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"DataSecurityAndPrivacyContext" -> "DataCanonizationContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"DataSecurityAndPrivacyContext" -> "DataAnonimizationContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"DataSecurityAndPrivacyContext" -> "AIModelDevelopmentContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"DataSecurityAndPrivacyContext" -> "InvestigationAndDevelopmentContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"SalesManagementContext" -> "APIManagementContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+}

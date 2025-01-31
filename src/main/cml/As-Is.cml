@@ -33,69 +33,36 @@ Domain ArtificialIntelligenceForMedicalImages {
 }
 
 
-BoundedContext DataIngestionContext implements DataPartnership {
-
-}
-
-BoundedContext DataProcessingContext implements DataPartnership, DataProcessing, DataProcessing {
-
-}
-
-BoundedContext CustomerFacingContext implements APIPlatformDevelopment {
-
-}
-
-BoundedContext DataSecurityAndPrivacyContext implements DataPrivacyAndSecurity {
-
-}
-
-BoundedContext ScalabilityAndInfrastructureContext implements ScalabilityAndInfrastructure {
-
-}
-
-BoundedContext AIModelDevelopmentContext implements AIModelDevelopment {
-
-}
-
-BoundedContext CustomerAndRelationshipManagementContext implements APIPlatformDevelopment {
-
-}
-
-BoundedContext InvestigationAndDevelopmentContext implements APIPlatformDevelopment {
-
-}
-
-BoundedContext DataIngestionAndCanonizationContext implements APIPlatformDevelopment {
-
-}
-
-BoundedContext DataProcessingContext implements DataProcessing {
-
-}
-
+BoundedContext DataIngestionContext implements DataPartnership {}
+BoundedContext DataAnonimizationContext implements DataProcessing {}
+BoundedContext DataCanonizationContext implements DataProcessing {}
+BoundedContext DataSecurityAndPrivacyContext implements DataPrivacyAndSecurity {}
+BoundedContext AIModelDevelopmentContext implements AIModelDevelopment {}
+BoundedContext APIManagementContext implements APIPlatformDevelopment {}
+BoundedContext SalesManagementContext implements Sales {}
+BoundedContext InvestigationAndDevelopmentContext implements AIModelDevelopment {}
 
 ContextMap PropiedadesDeSaludTech {
-	state = AS_IS
+  state = AS_IS
 
-	contains DataIngestionContext
-	contains DataProcessingContext
-	contains CustomerFacingContext
+  contains DataIngestionContext
+  contains DataAnonimizationContext
+  contains DataCanonizationContext
   contains DataSecurityAndPrivacyContext
-  contains ScalabilityAndInfrastructureContext
   contains AIModelDevelopmentContext
-  contains CustomerAndRelationshipManagementContext
+  contains APIManagementContext
+  contains SalesManagementContext
   contains InvestigationAndDevelopmentContext
-  contains DataIngestionAndCanonizationContext
-  contains DataProcessingContext
-	
-	/* 
-	 * Tenga en cuenta que dado como el sistema se encuentra se puede asumir un Shared Kernel
-	 * pero si usted pensó en otro tipo de relación es totalmente ví¡lido
-	 */
-	DataIngestionAndCanonizationContext [SK]<->[SK] DataProcessingContext
 
-	DataProcessingContext [D] <- [U] CustomerFacingContext
-
-	CustomerFacingContext [D] <- [U] DataIngestionAndCanonizationContext
-
+  DataIngestionContext [SK] <-> [SK] DataAnonimizationContext
+  DataIngestionContext [D] <- [U] DataCanonizationContext
+  DataAnonimizationContext [D] <- [U] DataSecurityAndPrivacyContext
+  DataCanonizationContext [D] <- [U] DataSecurityAndPrivacyContext
+  DataCanonizationContext [D] <- [U] AIModelDevelopmentContext
+  AIModelDevelopmentContext [D] <- [U] DataSecurityAndPrivacyContext
+  AIModelDevelopmentContext [D] <- [U] APIManagementContext
+  APIManagementContext [D] <- [U] SalesManagementContext
+  InvestigationAndDevelopmentContext [D] <- [U] AIModelDevelopmentContext
+  InvestigationAndDevelopmentContext [D] <- [U] DataSecurityAndPrivacyContext
+  InvestigationAndDevelopmentContext [D] <- [U] APIManagementContext
 }
