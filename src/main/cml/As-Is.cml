@@ -11,7 +11,7 @@ Domain ArtificialIntelligenceForMedicalImages {
     domainVisionStatement = "Data Analysis, Data Processing, Images Anonymization, Images processing, Mapping, Data Validation, Data Verification"
   }
 
-  Subdomain APIPlatformDevelopment {
+  Subdomain SaludTechPlatformDevelopment {
     type = CORE_DOMAIN
     domainVisionStatement = "Software Engineering, Integration, Technologiest, Monitoring, Software Relability Engineering, Software Quality, Payment Gateway, API, Web Services, Cloud Computing"
   }   
@@ -37,10 +37,9 @@ BoundedContext DataIngestionContext implements DataPartnership {}
 BoundedContext DataAnonimizationContext implements DataProcessing {}
 BoundedContext DataCanonizationContext implements DataProcessing {}
 BoundedContext DataSecurityAndPrivacyContext implements DataPrivacyAndSecurity {}
-BoundedContext AIModelDevelopmentContext implements AIModelDevelopment {}
-BoundedContext APIManagementContext implements APIPlatformDevelopment {}
+BoundedContext AIModelDevelopmentAndInvestigationContext implements AIModelDevelopment {}
+BoundedContext SaludTechPlatformDevelopmentContext implements SaludTechPlatformDevelopment {}
 BoundedContext SalesManagementContext implements Sales {}
-BoundedContext InvestigationAndDevelopmentContext implements AIModelDevelopment {}
 
 ContextMap PropiedadesDeSaludTech {
   state = AS_IS
@@ -49,20 +48,16 @@ ContextMap PropiedadesDeSaludTech {
   contains DataAnonimizationContext
   contains DataCanonizationContext
   contains DataSecurityAndPrivacyContext
-  contains AIModelDevelopmentContext
-  contains APIManagementContext
+  contains AIModelDevelopmentAndInvestigationContext
+  contains SaludTechPlatformDevelopmentContext
   contains SalesManagementContext
-  contains InvestigationAndDevelopmentContext
 
   DataIngestionContext [SK] <-> [SK] DataAnonimizationContext
-  DataIngestionContext [D] <- [U] DataCanonizationContext
+  DataAnonimizationContext [SK] <-> [SK] DataCanonizationContext
   DataAnonimizationContext [D] <- [U] DataSecurityAndPrivacyContext
   DataCanonizationContext [D] <- [U] DataSecurityAndPrivacyContext
-  DataCanonizationContext [D] <- [U] AIModelDevelopmentContext
-  AIModelDevelopmentContext [D] <- [U] DataSecurityAndPrivacyContext
-  AIModelDevelopmentContext [D] <- [U] APIManagementContext
-  APIManagementContext [D] <- [U] SalesManagementContext
-  InvestigationAndDevelopmentContext [D] <- [U] AIModelDevelopmentContext
-  InvestigationAndDevelopmentContext [D] <- [U] DataSecurityAndPrivacyContext
-  InvestigationAndDevelopmentContext [D] <- [U] APIManagementContext
+  DataCanonizationContext [D] <- [U] AIModelDevelopmentAndInvestigationContext
+  AIModelDevelopmentAndInvestigationContext [D] <- [U] DataSecurityAndPrivacyContext
+  DataCanonizationContext [U] -> [D] SaludTechPlatformDevelopmentContext
+  SaludTechPlatformDevelopmentContext [D] <- [U] SalesManagementContext
 }
