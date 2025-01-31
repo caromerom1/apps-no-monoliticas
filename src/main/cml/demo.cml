@@ -3,32 +3,32 @@ Domain ArtificialIntelligenceForMedicalImages {
 
   Subdomain DataPartnership {
     type = GENERIC_SUBDOMAIN
-    domainVisionStatement = ""
+    domainVisionStatement = "Data integration, Data ingestion, Data Transformation, Data storage"
   } 
 
   Subdomain DataProcessing {
     type = GENERIC_SUBDOMAIN
-    domainVisionStatement = ""
+    domainVisionStatement = "Data Analysis, Data Processing, Images Anonymization, Images processing, Mapping, Data Validation, Data Verification"
   }
 
   Subdomain APIPlatformDevelopment {
     type = CORE_DOMAIN
-    domainVisionStatement = ""
+    domainVisionStatement = "Software Engineering, Integration, Technologiest, Monitoring, Software Relability Engineering, Software Quality, Payment Gateway, API, Web Services, Cloud Computing"
   }   
 
   Subdomain AIModelDevelopment {
     type = GENERIC_SUBDOMAIN
-    domainVisionStatement = ""
+    domainVisionStatement = "Machine learning, Deep learning, Neural Networks, Computer Vision, Image Processing, Image Recognition, Image Classification, Image Segmentation, Image Detection, Image Analysis"
   }
 
   Subdomain DataPrivacyAndSecurity {
     type = CORE_DOMAIN
-    domainVisionStatement = ""
+    domainVisionStatement = "Data processing, Informatic Security, Data Security, Data Privacy, Data Protection"
   }
 
   Subdomain Sales {
     type = SUPPORTING_DOMAIN
-    domainVisionStatement = ""
+    domainVisionStatement = "Sales, Customers, Vendors, Partners, Business Development, Marketing, Customer Relationship Management, Customer Service"
   }
 }
 
