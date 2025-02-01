@@ -1,0 +1,77 @@
+digraph "ContextMapGraph" {
+graph ["imagepath"="/tmp/GraphvizJava"]
+"AIModelDevelopmentContext" ["margin"="0.3","orientation"="105","shape"="egg","fontsize"="16","style"="bold","label"="AIModelDevelopmentContext\n","fontname"="sans-serif"]
+"DataCanonizationContext" ["margin"="0.3","orientation"="182","shape"="egg","fontsize"="16","style"="bold","label"="DataCanonizationContext\n","fontname"="sans-serif"]
+"SaludTechPlatformDevelopmentContext" ["margin"="0.3","orientation"="40","shape"="egg","fontsize"="16","style"="bold","label"="SaludTechPlatformDevelopmentContext\n","fontname"="sans-serif"]
+"ServiceResearchContext" ["margin"="0.3","orientation"="26","shape"="egg","fontsize"="16","style"="bold","label"="ServiceResearchContext\n","fontname"="sans-serif"]
+"AutomatizationContext" ["margin"="0.3","orientation"="296","shape"="egg","fontsize"="16","style"="bold","label"="AutomatizationContext\n","fontname"="sans-serif"]
+"DataAnonimizationContext" ["margin"="0.3","orientation"="79","shape"="egg","fontsize"="16","style"="bold","label"="DataAnonimizationContext\n","fontname"="sans-serif"]
+"DataIngestionContext" ["margin"="0.3","orientation"="71","shape"="egg","fontsize"="16","style"="bold","label"="DataIngestionContext\n","fontname"="sans-serif"]
+"DataSecurityAndPrivacyContext" ["margin"="0.3","orientation"="79","shape"="egg","fontsize"="16","style"="bold","label"="DataSecurityAndPrivacyContext\n","fontname"="sans-serif"]
+"SalesManagementContext" ["margin"="0.3","orientation"="47","shape"="egg","fontsize"="16","style"="bold","label"="SalesManagementContext\n","fontname"="sans-serif"]
+"AIModelDevelopmentContext" -> "DataCanonizationContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"AIModelDevelopmentContext" -> "ServiceResearchContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"DataCanonizationContext" -> "SaludTechPlatformDevelopmentContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="1" border="0">
+<tr><td bgcolor="white" sides="r">U</td><td sides="trbl" bgcolor="white"><font>OHS, PL</font></td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"AutomatizationContext" -> "DataCanonizationContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"AutomatizationContext" -> "DataAnonimizationContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"AutomatizationContext" -> "DataIngestionContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"DataAnonimizationContext" -> "DataCanonizationContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"DataIngestionContext" -> "DataAnonimizationContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"DataSecurityAndPrivacyContext" -> "AIModelDevelopmentContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"DataSecurityAndPrivacyContext" -> "DataCanonizationContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"DataSecurityAndPrivacyContext" -> "DataAnonimizationContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"DataSecurityAndPrivacyContext" -> "ServiceResearchContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"SalesManagementContext" -> "SaludTechPlatformDevelopmentContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+}
