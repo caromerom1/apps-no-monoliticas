@@ -1,5 +1,5 @@
 Domain ArtificialIntelligenceForMedicalImages {
-    domainVisionStatement = ""
+    domainVisionStatement = "Processing and images medical images anonimized for AI developments"
 
   Subdomain DataPartnership {
         type = GENERIC_SUBDOMAIN

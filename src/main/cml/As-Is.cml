@@ -1,35 +1,35 @@
 Domain ArtificialIntelligenceForMedicalImages {
-  domainVisionStatement = ""
+  domainVisionStatement = "Processing and images medical images anonimized for AI developments"
 
   Subdomain DataPartnership {
-    type = GENERIC_SUBDOMAIN
-    domainVisionStatement = "Data integration, Data ingestion, Data Transformation, Data storage"
-  } 
+        type = GENERIC_SUBDOMAIN
+        domainVisionStatement = "Data integration, ingestion, storage"
+    }
 
-  Subdomain DataProcessing {
-    type = GENERIC_SUBDOMAIN
-    domainVisionStatement = "Data Analysis, Data Processing, Images Anonymization, Images processing, Mapping, Data Validation, Data Verification"
-  }
+    Subdomain DataProcessing {
+        type = GENERIC_SUBDOMAIN
+        domainVisionStatement = "Data Analysis, Processing, Anonymization, Mapping, Validation, Verification"
+    }
 
-  Subdomain SaludTechPlatformDevelopment {
-    type = CORE_DOMAIN
-    domainVisionStatement = "Software Engineering, Integration, Technologiest, Monitoring, Software Relability Engineering, Software Quality, Payment Gateway, API, Web Services, Cloud Computing"
-  }   
+    Subdomain SaludTechPlatformDevelopment {
+        type = CORE_DOMAIN
+        domainVisionStatement = "SaludTech platform development, monitoring and mainteinance"
+    }
 
-  Subdomain AIModelDevelopment {
-    type = GENERIC_SUBDOMAIN
-    domainVisionStatement = "Machine learning, Deep learning, Neural Networks, Computer Vision, Image Processing, Image Recognition, Image Classification, Image Segmentation, Image Detection, Image Analysis"
-  }
+    Subdomain AIModelDevelopment {
+        type = GENERIC_SUBDOMAIN
+        domainVisionStatement = "AI Model development"
+    }
 
-  Subdomain DataPrivacyAndSecurity {
-    type = CORE_DOMAIN
-    domainVisionStatement = "Data processing, Informatic Security, Data Security, Data Privacy, Data Protection"
-  }
+    Subdomain DataPrivacyAndSecurity {
+        type = CORE_DOMAIN
+        domainVisionStatement = "Guarantee rules and regulations for data privacy and security"
+    }
 
-  Subdomain Sales {
-    type = SUPPORTING_DOMAIN
-    domainVisionStatement = "Sales, Customers, Vendors, Partners, Business Development, Marketing, Customer Relationship Management, Customer Service"
-  }
+    Subdomain Sales {
+        type = SUPPORTING_DOMAIN
+        domainVisionStatement = "Sales, Customers, Vendors, Partners, Business Development, Marketing, Customer Relationship Management, Customer Service"
+    }
 }
 
 
