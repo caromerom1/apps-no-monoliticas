@@ -1,0 +1,104 @@
+Domain ArtificialIntelligenceForMedicalImages {
+    domainVisionStatement = "Processing and images medical images anonimized for AI developers"
+
+  Subdomain DataPartnership {
+        type = GENERIC_SUBDOMAIN
+        domainVisionStatement = "Data integration, ingestion, storage"
+    }
+
+    Subdomain DataProcessing {
+        type = GENERIC_SUBDOMAIN
+        domainVisionStatement = "Data Analysis, Processing, Anonymization, Mapping, Validation, Verification"
+    }
+
+    Subdomain SaludTechPlatformDevelopment {
+        type = CORE_DOMAIN
+        domainVisionStatement = "SaludTech platform development, monitoring and mainteinance"
+    }
+
+    Subdomain AIModelDevelopment {
+        type = GENERIC_SUBDOMAIN
+        domainVisionStatement = "AI Model development"
+    }
+
+    Subdomain DataPrivacyAndSecurity {
+        type = CORE_DOMAIN
+        domainVisionStatement = "Guarantee rules and regulations for data privacy and security"
+    }
+
+    Subdomain Sales {
+        type = SUPPORTING_DOMAIN
+        domainVisionStatement = "Sales, Customers, Vendors, Partners, Business Development, Marketing, Customer Relationship Management, Customer Service"
+    }
+
+}
+
+BoundedContext DataIngestionContext implements DataPartnership {
+}
+
+BoundedContext DataAnonimizationContext implements DataProcessing {
+}
+
+BoundedContext DataCanonizationContext implements DataProcessing {
+}
+
+BoundedContext DataSecurityAndPrivacyContext implements DataPrivacyAndSecurity {
+}
+
+BoundedContext AIModelDevelopmentContext implements AIModelDevelopment {
+}
+
+BoundedContext SaludTechPlatformDevelopmentContext implements SaludTechPlatformDevelopment {
+}
+
+BoundedContext SalesManagementContext implements Sales {
+}
+
+BoundedContext ResearchAndDevelopmentContext implements AIModelDevelopment {
+}
+
+BoundedContext ServiceResearchContext implements AIModelDevelopment {
+}
+
+BoundedContext AutomationContext implements DataProcessing, AIModelDevelopment {
+}
+
+ContextMap PropiedadesDeSaludTech {
+    state = TO_BE
+    contains DataIngestionContext
+    contains DataAnonimizationContext
+    contains DataCanonizationContext
+    contains DataSecurityAndPrivacyContext
+    contains AIModelDevelopmentContext
+    contains SaludTechPlatformDevelopmentContext
+    contains SalesManagementContext
+    contains ServiceResearchContext
+    contains AutomationContext
+
+    DataIngestionContext [U] -> [D] DataAnonimizationContext
+
+    DataAnonimizationContext [U] -> [D] DataCanonizationContext
+
+    DataAnonimizationContext [D] <- [U] DataSecurityAndPrivacyContext
+
+    DataCanonizationContext [D] <- [U] DataSecurityAndPrivacyContext
+
+    DataCanonizationContext [D] <- [U] AIModelDevelopmentContext
+
+    AIModelDevelopmentContext [D] <- [U] DataSecurityAndPrivacyContext
+
+    DataCanonizationContext [OHS, PL] -> [D] SaludTechPlatformDevelopmentContext
+
+    SaludTechPlatformDevelopmentContext [D] <- [U] SalesManagementContext
+
+    ServiceResearchContext [D] <- [U] AIModelDevelopmentContext
+
+    ServiceResearchContext [D] <- [U] DataSecurityAndPrivacyContext
+
+    AutomationContext [U] -> [D] DataAnonimizationContext
+
+    AutomationContext [U] -> [D] DataCanonizationContext
+
+    DataIngestionContext [D] <- [U] AutomationContext
+}
+

@@ -1,0 +1,42 @@
+digraph "ContextMapGraph" {
+graph ["imagepath"="/tmp/GraphvizJava"]
+"AIModelDevelopmentAndInvestigationContext" ["margin"="0.3","orientation"="119","shape"="egg","fontsize"="16","style"="bold","label"="AIModelDevelopmentAndInvestigationContext\n","fontname"="sans-serif"]
+"DataCanonizationContext" ["margin"="0.3","orientation"="119","shape"="egg","fontsize"="16","style"="bold","label"="DataCanonizationContext\n","fontname"="sans-serif"]
+"SaludTechPlatformDevelopmentContext" ["margin"="0.3","orientation"="105","shape"="egg","fontsize"="16","style"="bold","label"="SaludTechPlatformDevelopmentContext\n","fontname"="sans-serif"]
+"DataAnonimizationContext" ["margin"="0.3","orientation"="162","shape"="egg","fontsize"="16","style"="bold","label"="DataAnonimizationContext\n","fontname"="sans-serif"]
+"DataIngestionContext" ["margin"="0.3","orientation"="228","shape"="egg","fontsize"="16","style"="bold","label"="DataIngestionContext\n","fontname"="sans-serif"]
+"DataSecurityAndPrivacyContext" ["margin"="0.3","orientation"="40","shape"="egg","fontsize"="16","style"="bold","label"="DataSecurityAndPrivacyContext\n","fontname"="sans-serif"]
+"SalesManagementContext" ["margin"="0.3","orientation"="0","shape"="egg","fontsize"="16","style"="bold","label"="SalesManagementContext\n","fontname"="sans-serif"]
+"AIModelDevelopmentAndInvestigationContext" -> "DataCanonizationContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"DataCanonizationContext" -> "SaludTechPlatformDevelopmentContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"DataAnonimizationContext" -> "DataCanonizationContext" ["fontsize"="12","style"="bold","label"="Shared Kernel","dir"="none","fontname"="sans-serif"]
+"DataIngestionContext" -> "DataAnonimizationContext" ["fontsize"="12","style"="bold","label"="Shared Kernel","dir"="none","fontname"="sans-serif"]
+"DataSecurityAndPrivacyContext" -> "DataAnonimizationContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"DataSecurityAndPrivacyContext" -> "AIModelDevelopmentAndInvestigationContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"DataSecurityAndPrivacyContext" -> "DataCanonizationContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"SalesManagementContext" -> "SaludTechPlatformDevelopmentContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+}

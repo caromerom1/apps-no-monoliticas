@@ -1,0 +1,63 @@
+Domain ArtificialIntelligenceForMedicalImages {
+  domainVisionStatement = "Processing and images medical images anonimized for AI developers"
+
+  Subdomain DataPartnership {
+        type = GENERIC_SUBDOMAIN
+        domainVisionStatement = "Data integration, ingestion, storage"
+    }
+
+    Subdomain DataProcessing {
+        type = GENERIC_SUBDOMAIN
+        domainVisionStatement = "Data Analysis, Processing, Anonymization, Mapping, Validation, Verification"
+    }
+
+    Subdomain SaludTechPlatformDevelopment {
+        type = CORE_DOMAIN
+        domainVisionStatement = "SaludTech platform development, monitoring and mainteinance"
+    }
+
+    Subdomain AIModelDevelopment {
+        type = GENERIC_SUBDOMAIN
+        domainVisionStatement = "AI Model development"
+    }
+
+    Subdomain DataPrivacyAndSecurity {
+        type = CORE_DOMAIN
+        domainVisionStatement = "Guarantee rules and regulations for data privacy and security"
+    }
+
+    Subdomain Sales {
+        type = SUPPORTING_DOMAIN
+        domainVisionStatement = "Sales, Customers, Vendors, Partners, Business Development, Marketing, Customer Relationship Management, Customer Service"
+    }
+}
+
+
+BoundedContext DataIngestionContext implements DataPartnership {}
+BoundedContext DataAnonimizationContext implements DataProcessing {}
+BoundedContext DataCanonizationContext implements DataProcessing {}
+BoundedContext DataSecurityAndPrivacyContext implements DataPrivacyAndSecurity {}
+BoundedContext AIModelDevelopmentAndInvestigationContext implements AIModelDevelopment {}
+BoundedContext SaludTechPlatformDevelopmentContext implements SaludTechPlatformDevelopment {}
+BoundedContext SalesManagementContext implements Sales {}
+
+ContextMap PropiedadesDeSaludTech {
+  state = AS_IS
+
+  contains DataIngestionContext
+  contains DataAnonimizationContext
+  contains DataCanonizationContext
+  contains DataSecurityAndPrivacyContext
+  contains AIModelDevelopmentAndInvestigationContext
+  contains SaludTechPlatformDevelopmentContext
+  contains SalesManagementContext
+
+  DataIngestionContext [SK] <-> [SK] DataAnonimizationContext
+  DataAnonimizationContext [SK] <-> [SK] DataCanonizationContext
+  DataAnonimizationContext [D] <- [U] DataSecurityAndPrivacyContext
+  DataCanonizationContext [D] <- [U] DataSecurityAndPrivacyContext
+  DataCanonizationContext [D] <- [U] AIModelDevelopmentAndInvestigationContext
+  AIModelDevelopmentAndInvestigationContext [D] <- [U] DataSecurityAndPrivacyContext
+  DataCanonizationContext [U] -> [D] SaludTechPlatformDevelopmentContext
+  SaludTechPlatformDevelopmentContext [D] <- [U] SalesManagementContext
+}
