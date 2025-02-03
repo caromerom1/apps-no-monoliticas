@@ -1,3 +1,22 @@
+# Estructura del proyecto
+
+Los graficos asociados al dominio, subdominio y context mapper, en la siguiente ruta **src > main > cml**
+
+<img width="153" alt="Screenshot 2025-02-02 at 10 56 38 PM" src="https://github.com/user-attachments/assets/b63f8236-7350-48e6-be66-9546512a662b" />
+
+ ## AS-IS
+
+[AsIs ContextMapper y Definición de Dominio](https://github.com/caromerom1/apps-no-monoliticas/blob/develop/src/main/cml/As-Is.cml)
+![As-Is_ContextMap](https://github.com/user-attachments/assets/7e3c376c-c652-4348-b775-2e5b0d5f3ba4)
+
+ 
+
+ ## TO-BE
+
+ [ToBe ContextMapper y Definición de Dominio](https://github.com/caromerom1/apps-no-monoliticas/blob/develop/src/main/cml/To-Be.cml)
+ ![To-Be_ContextMap](https://github.com/user-attachments/assets/1a4873b8-0f77-4db8-93fc-f16356f6d05e)
+
+
 ![Context Mapper](https://raw.githubusercontent.com/wiki/ContextMapper/context-mapper-dsl/logo/cm-logo-github-small.png)
 # Context Mapper Demo for Online IDE 
 [![Build](https://github.com/ContextMapper/web-ide-demo/actions/workflows/build.yml/badge.svg)](https://github.com/ContextMapper/web-ide-demo/actions) [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/ContextMapper/web-ide-demo) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
