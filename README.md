@@ -1,6 +1,6 @@
 # Estructura del proyecto
 
-Los graficos asociados al dominio, subdominio y context mapper, en la siguiente ruta **src > main > cml**
+Los graficos asociados al dominio, subdominio y context mapper, se encuentran en la siguiente ruta **src > main > cml**
 
 <img width="153" alt="Screenshot 2025-02-02 at 10 56 38 PM" src="https://github.com/user-attachments/assets/b63f8236-7350-48e6-be66-9546512a662b" />
 
